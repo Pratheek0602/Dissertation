@@ -1,0 +1,21 @@
+predictions /// labels /// Correct or wrong 
+68.0 /// 68.0 /// CORRECT 
+118.0 /// 118.0 /// CORRECT 
+124.0 /// 124.0 /// CORRECT 
+50.0 /// 50.0 /// CORRECT 
+154.0 /// 154.0 /// CORRECT 
+91.0 /// 91.0 /// CORRECT 
+74.0 /// 74.0 /// CORRECT 
+93.0 /// 93.0 /// CORRECT 
+180.0 /// 180.0 /// CORRECT 
+111.0 /// 111.0 /// CORRECT 
+135.0 /// 135.0 /// CORRECT 
+125.0 /// 125.0 /// CORRECT 
+168.0 /// 168.0 /// CORRECT 
+111.0 /// 111.0 /// CORRECT 
+106.0 /// 106.0 /// CORRECT 
+106.0 /// 106.0 /// CORRECT 
+125.0 /// 125.0 /// CORRECT 
+99.0 /// 99.0 /// CORRECT 
+106.0 /// 106.0 /// CORRECT 
+115.0 /// 115.0 /// CORRECT 
