@@ -42,49 +42,6 @@ class DropDataset(Dataset):
     def __repr__(self):
         return f"DropDataset(examples={len(self.examples)})"
 
-# # Define a function to calculate the accuracy of the model's predictions.
-# def top_k_predictions(outputs, labels):
-#   """Calculates the accuracy of the model's predictions.
-
-#   Args:
-#     outputs: The outputs of the model.
-#     labels: The ground truth labels.
-
-#   Returns:
-#     The accuracy of the model's predictions.
-#   """
-
-#   predictions = torch.argmax(outputs.logits, dim=-1)
-#   acc = 0
-#   for i in range(len(outputs.logits)):
-#     # Get the prediction tokens.
-#     prediction_tokens = tokenizer.convert_ids_to_tokens(torch.argmax(outputs.logits[i], dim=-1))
-#     #------------------------------------- Pratheek line of interest ---------------------#
-#     # Convert logits into probability (0 to 1)
-#     probability_logits = torch.nn.functional.softmax(outputs.logits[i], dim=-1)
-#     top_k = 3
-#     # extract top_k probabilities and token_ids
-#     top_token_prob, top_token_ids = torch.topk(probability_logits, top_k)
-#     # print predicted tokens with associated probability from most probable to least probable
-#     for k, (token_ids, probs) in enumerate(zip(top_token_ids, top_token_prob)):
-#         print(f'predictions of token {k}:')
-#         for tokens, prob in zip(tokenizer.convert_ids_to_tokens(token_ids), torch.round(torch.tensor(probs), decimals=3)):
-#             print(tokens, ':', prob.item())
-#         print('\n')
-#     #------------------------------------- Pratheek line of interest ---------------------#
-              
-#     label_tokens = tokenizer.convert_ids_to_tokens(labels[i])
-
-#     # Join the prediction tokens into a string.
-#     prediction_string = tokenizer.decode(torch.argmax(outputs.logits[i], dim=-1), skip_special_tokens=True)
-#     label_string = tokenizer.decode(labels[i], skip_special_tokens=True)
-#     if prediction_string.lower() == label_string.lower():
-#       print(f'Prediction: {prediction_string}, Label: {label_string}')          
-#       acc += 1
-
-#   total = labels.size(0)
-#   return acc
-
 ######## For the interactive input
 def get_user_input(file_path):
     question = input("Please enter your question: ")
