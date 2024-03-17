@@ -384,8 +384,8 @@ def fine_tune_bart(tokenizer, model_name, max_length_input, max_length_label, ba
     optimizer = AdamW(model.parameters(), lr=learning_rate, weight_decay=0.005)
 
     # Generate embeddings for the Dataloader
-    drop_train = data_reader(f'{data_dir}/mixed_200.train', model, f_bos, f_eos, device)
-    drop_val = data_reader(f'{data_dir}/mixed_500.dev', model, f_bos, f_eos, device)
+    drop_train = data_reader(f'{data_dir}/mixed_200000.train', model, f_bos, f_eos, device)
+    drop_val = data_reader(f'{data_dir}/mixed_1000.dev', model, f_bos, f_eos, device)
 
     # Prepare the dataset
     train_dataset = DropDataset(drop_train, model, device, f_bos, f_eos)
@@ -459,7 +459,7 @@ parser.add_argument('--lr',
                     help='learning rate')
 parser.add_argument('--data_dir',
                     type=str,
-                    default = '/Users/vasupratheek/Desktop/University/Code',
+                    default = '/Users/vasupratheek/Desktop/University/Dissertation',
                     help='path to data directory')
 parser.add_argument('--output_dir',
                     type=str,
